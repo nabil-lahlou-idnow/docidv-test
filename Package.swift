@@ -23,23 +23,23 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "DocIDVCommon",
-            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.0.2/DocIDVCommon.xcframework.zip",
-            checksum: "588bf60c03ddb67f31ca76187d74550b668c90814b4092cf7dc3c8d1d0d44e97"
+            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.4.0/DocIDVCommon.xcframework.zip",
+            checksum: "6f7e78465d5e08e3c7774df530e35f1484ba7c219b94e71d2e2fd5f6cd31b181"
         ),
         .binaryTarget(
             name: "DocIDV",
-            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.0.2/DocIDV.xcframework.zip",
-            checksum: "dcbfed7a301bf795223f0293d98fa050ca14c3f01fa8e912137bc29807aca613"
+            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.4.0/DocIDV.xcframework.zip",
+            checksum: "fc0ac6695753d1eaa80b310132d1828ee3303ec462d733c8c6a7df593b215410"
         ),
         .binaryTarget(
             name: "DocIDVAIModule",
-            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.0.2/DocIDVAIModule.xcframework.zip",
-            checksum: "3e6d1fe4bf0a6fad1d828f3ceb470d5ac723747e0548cf7508381084f5250c6c"
+            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.4.0/DocIDVAIModule.xcframework.zip",
+            checksum: "d85a0c4d1399539bb28e1d1757839a2c58ef9e0cd85e58c42a0c5b6cbd5dec06"
         ),
         .binaryTarget(
             name: "DocIDVEIDGovernikusModule",
-            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.0.2/DocIDVEIDGovernikusModule.xcframework.zip",
-            checksum: "9e627322cb13830099aee14fb2b67cf7692d62dc40da58d8f8d7ab980c7460fa"
+            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.4.0/DocIDVEIDGovernikusModule.xcframework.zip",
+            checksum: "d23709c02f3473303122aacefc1b5873987dc587a21506d5333ef82a852aee4b"
         ),
         .target(
             name: "DocIDV-Target-Wrapper",

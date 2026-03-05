@@ -24,22 +24,22 @@ let package = Package(
         .binaryTarget(
             name: "DocIDVCommon",
             url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.0.0/DocIDVCommon.xcframework.zip",
-            checksum: "1cf4f82ef9c0d8ccacf0e923a7ef3ad309a3494462f6e22612e6e0f5995791b4"
+            checksum: "58322284d623210cf4a1a5b20e6abe1be170bfaa17f626cc9ef2cc674e651e22"
         ),
         .binaryTarget(
             name: "DocIDV",
             url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.0.0/DocIDV.xcframework.zip",
-            checksum: "fac663bf6ed9563b25023aa45964970e222335f6d57946c09aacc37cd4eab919"
+            checksum: "69f0aea2bbd072a2f83d443f802403f367f73bf0d43e63c4a4d6dbe434106b82"
         ),
         .binaryTarget(
             name: "DocIDVAIModule",
             url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.0.0/DocIDVAIModule.xcframework.zip",
-            checksum: "fcf9dc81b1dc29e217ee082b724f5a7099930e274333623db87a698438a36170"
+            checksum: "2a1a011a0bd22e397add1ac2cddae3ddaae04c0eed87471d3b35e3273e63f55f"
         ),
         .binaryTarget(
             name: "DocIDVEIDGovernikusModule",
             url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.0.0/DocIDVEIDGovernikusModule.xcframework.zip",
-            checksum: "bbc3dac166cf1cd938173c9e872b494f0006c928b10cf71a014779d0a5710e10"
+            checksum: "7e7149ac3be040ab9faf63d20bdcc342491c956579ea395be65e4b6b8e47dafc"
         ),
         .target(
             name: "DocIDV-Target-Wrapper",

@@ -17,8 +17,8 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/nabil-lahlou-idnow/docidv-ai-test.git", exact: "1.6.0"),
-        .package(url: "https://github.com/thomas-legris-idnow/eid-deploy-test.git", exact: "3.4.0")
+        .package(url: "https://github.com/idnow/docidv-ai-ios.git", exact: "1.6.0"),
+        .package(url: "https://github.com/idnow/eid-sdk-ios.git", exact: "1.3.0")
     ],
     targets: [
         .binaryTarget(
@@ -47,7 +47,7 @@ let package = Package(
                 "DocIDV",
                 "DocIDVCommon",
                 "DocIDVAIModule",
-                .product(name: "DocIDVAI", package: "docidv-ai-test")
+                .product(name: "DocIDVAI", package: "docidv-ai-ios")
             ],
             path: "sources"
         ),
@@ -58,8 +58,8 @@ let package = Package(
                 "DocIDVCommon",
                 "DocIDVAIModule",
                 "DocIDVEIDGovernikusModule",
-                .product(name: "DocIDVAI", package: "docidv-ai-test"),
-                .product(name: "IDnowEIDGovernikus", package: "eid-deploy-test")
+                .product(name: "DocIDVAI", package: "docidv-ai-ios"),
+                .product(name: "IDnowEIDGovernikus", package: "eid-sdk-ios")
             ],
             path: "sources-eid-governikus"
         )

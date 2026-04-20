@@ -17,48 +17,75 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/idnow/docidv-ai-ios.git", exact: "1.6.0"),
-        .package(url: "https://github.com/idnow/eid-sdk-ios.git", exact: "1.3.0")
+        .package(url: "https://github.com/idnow/eid-sdk-ios.git", exact: "1.3.4"),
+        .package(url: "https://github.com/unissey/sdk-ios.git", exact: "4.0.0"),
+        .package(url: "https://github.com/idnow/sunflower-sdk-ios.git", exact: "2.1.8")
     ],
     targets: [
         .binaryTarget(
             name: "DocIDVCommon",
-            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.4.0/DocIDVCommon.xcframework.zip",
-            checksum: "6f7e78465d5e08e3c7774df530e35f1484ba7c219b94e71d2e2fd5f6cd31b181"
+            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.7.0/DocIDVCommon.xcframework.zip",
+            checksum: "bfc38d3affa3d452925d4246d1d2253306e61a0c44296c3a2dde8b19210a4fe6"
         ),
         .binaryTarget(
             name: "DocIDV",
-            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.4.0/DocIDV.xcframework.zip",
-            checksum: "fc0ac6695753d1eaa80b310132d1828ee3303ec462d733c8c6a7df593b215410"
+            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.7.0/DocIDV.xcframework.zip",
+            checksum: "dfae9adf26c7bdedf248e5fe2b0385a5ad329ba1051895e3751457a64f756839"
         ),
         .binaryTarget(
             name: "DocIDVAIModule",
-            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.4.0/DocIDVAIModule.xcframework.zip",
-            checksum: "d85a0c4d1399539bb28e1d1757839a2c58ef9e0cd85e58c42a0c5b6cbd5dec06"
+            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.7.0/DocIDVAIModule.xcframework.zip",
+            checksum: "9eaa34a41af50c94bd22dc8d13a9ff49c30000974df51be6a61016791844d660"
+        ),
+        .binaryTarget(
+            name: "DocIDVAI",
+            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.7.0/DocIDVAI.xcframework.zip",
+            checksum: "1f954ef766040abf09cce47ef77e0bc0c641661c65620919334e0fc20db8935a"
         ),
         .binaryTarget(
             name: "DocIDVEIDGovernikusModule",
-            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.4.0/DocIDVEIDGovernikusModule.xcframework.zip",
-            checksum: "d23709c02f3473303122aacefc1b5873987dc587a21506d5333ef82a852aee4b"
+            url: "https://github.com/nabil-lahlou-idnow/docidv-test/releases/download/1.7.0/DocIDVEIDGovernikusModule.xcframework.zip",
+            checksum: "bd5a6db2825e357b0932c74a1a9e8bfdf24a8bf01f0cf3179cc437c2a1d4276d"
+        ),
+        .binaryTarget(
+            name: "FaceTecSDK",
+            path: "Frameworks/FaceTecSDK.xcframework"
+        ),
+        .binaryTarget(
+            name: "ReadID_UI",
+            path: "Frameworks/ReadID_UI.xcframework"
         ),
         .target(
             name: "DocIDV-Target-Wrapper",
             dependencies: [
+                // Local DocIDV sdk binaries
                 "DocIDV",
                 "DocIDVCommon",
                 "DocIDVAIModule",
-                .product(name: "DocIDVAI", package: "docidv-ai-ios")
+                "DocIDVAI",
+                // External frameworks saved locally
+                "FaceTecSDK",
+                "ReadID_UI",
+                // External public frameworks
+                .product(name: "UnisseySdk", package: "sdk-ios"),
+                .product(name: "SunflowerUIKit", package: "sunflower-sdk-ios")
             ],
             path: "sources"
         ),
         .target(
             name: "EID-Governikus-Target-Wrapper",
             dependencies: [
+                // Local DocIDV sdk binaries
                 "DocIDV",
                 "DocIDVCommon",
                 "DocIDVAIModule",
+                "DocIDVAI",
                 "DocIDVEIDGovernikusModule",
-                .product(name: "DocIDVAI", package: "docidv-ai-ios"),
+                // External frameworks saved locally
+                "FaceTecSDK",
+                "ReadID_UI",
+                // External public frameworks
+                .product(name: "UnisseySdk", package: "sdk-ios"),
                 .product(name: "IDnowEIDGovernikus", package: "eid-sdk-ios")
             ],
             path: "sources-eid-governikus"
